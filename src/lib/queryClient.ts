@@ -13,4 +13,4 @@ export const createQueryClient = () =>
         retry: 1,
       },
     },
-  }) 
+  })
