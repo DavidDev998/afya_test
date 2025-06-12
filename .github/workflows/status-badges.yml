@@ -1,0 +1,54 @@
+name: Update Status Badges
+
+on:
+  workflow_run:
+    workflows: ['CI', 'CD']
+    types: [completed]
+  schedule:
+    # Update badges daily at midnight
+    - cron: '0 0 * * *'
+
+jobs:
+  update-badges:
+    name: Update README Badges
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update CI Badge
+        run: |
+          # Update CI status badge in README
+          sed -i 's|!\[CI\](.*)|![CI](https://github.com/${{ github.repository }}/workflows/CI/badge.svg)|g' README.md
+
+      - name: Update CD Badge
+        run: |
+          # Update CD status badge in README
+          sed -i 's|!\[CD\](.*)|![CD](https://github.com/${{ github.repository }}/workflows/CD/badge.svg)|g' README.md
+
+      - name: Update Coverage Badge
+        run: |
+          # Update coverage badge (if using Codecov)
+          sed -i 's|!\[Coverage\](.*)|![Coverage](https://codecov.io/gh/${{ github.repository }}/branch/main/graph/badge.svg)|g' README.md
+
+      - name: Update License Badge
+        run: |
+          # Update license badge
+          sed -i 's|!\[License\](.*)|![License](https://img.shields.io/github/license/${{ github.repository }})|g' README.md
+
+      - name: Update Version Badge
+        run: |
+          # Update version badge from package.json
+          VERSION=$(node -p "require('./package.json').version")
+          sed -i "s|!\[Version\](.*)|![Version](https://img.shields.io/badge/version-${VERSION}-blue)|g" README.md
+
+      - name: Commit badge updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: update status badges [skip ci]"
+          git push
