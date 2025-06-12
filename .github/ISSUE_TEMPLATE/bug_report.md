@@ -1,85 +1,89 @@
 ---
-name: 🐛 Relatório de bug
-about: Crie um relatório para nos ajudar a melhorar
+name: 🐛 Bug Report
+about: Create a report to help us improve
 title: '[BUG] '
 labels: ['bug', 'needs-triage']
 assignees: ''
 ---
 
-## 🐛 Descrição do bug
+## 🐛 Bug Description
 
-<!-- Uma descrição clara e concisa do que é o bug -->
+<!-- A clear and concise description of what the bug is -->
 
-## 🔄 Passos para reproduzir
+## 🔄 Steps to Reproduce
 
-1. Vá para '...'
-2. Clique em '...'
-3. Role para baixo até '...'
-4. Veja o erro
+1. Go to '...'
+2. Click on '...'
+3. Scroll down to '...'
+4. See error
 
-## ✅ Comportamento esperado
+## ✅ Expected Behavior
 
-<!-- Uma descrição clara e concisa do que você esperava que acontecesse -->
+<!-- A clear and concise description of what you expected to happen -->
 
-## ❌ Comportamento atual
+## ❌ Actual Behavior
 
-<!-- Uma descrição clara e concisa do que realmente aconteceu -->
+<!-- A clear and concise description of what actually happened -->
 
-## 📱 Ambiente
+## 📱 Environment
 
-<!-- Por favor, complete as seguintes informações -->
+<!-- Please complete the following information -->
 
-### Informações do dispositivo
+### Device Information
 
-- **Dispositivo**: [ex: iPhone 12, Desktop]
-- **Sistema operacional**: [ex: iOS 15.1, Windows 11]
-- **Navegador**: [ex: Chrome 95, Safari 15]
-- **Resolução da tela**: [ex: 1920x1080]
+- **Device**: [e.g. iPhone 12, Desktop]
+- **OS**: [e.g. iOS 15.1, Windows 11]
+- **Browser**: [e.g. Chrome 95, Safari 15]
+- **Screen Resolution**: [e.g. 1920x1080]
 
-### Informações da aplicação
+### Application Information
 
-- **URL**: [ex: https://yourapp.vercel.app/coins]
-- **Versão**: [ex: hash do commit ou número da versão]
-- **Ambiente**: [ex: produção, homologação, local]
+- **URL**: [e.g. https://yourapp.vercel.app/coins]
+- **Version**: [e.g. commit hash or version number]
+- **Environment**: [e.g. production, staging, local]
 
-## 📸 Capturas de tela
+## 📸 Screenshots
 
-<!-- Se aplicável, adicione capturas de tela para ajudar a explicar o problema -->
+<!-- If applicable, add screenshots to help explain your problem -->
 
-## 🔍 Contexto adicional
+## 🔍 Additional Context
 
-<!-- Adicione qualquer outro contexto sobre o problema aqui -->
+<!-- Add any other context about the problem here -->
 
-### Erros no console
+### Console Errors
 
-<!-- Por favor, inclua quaisquer erros do console, se aplicável -->
+<!-- Please include any console errors if applicable -->
 
-### Problemas de rede
+```
+// Paste console errors here
+```
 
-<!-- Quaisquer problemas relacionados à rede observados -->
+### Network Issues
 
-- [ ] Carregamento lento
-- [ ] Requisições com falha
-- [ ] Erros de timeout
-- [ ] Problemas de CORS
+<!-- Any network-related issues observed -->
 
-## 🚨 Impacto
+- [ ] Slow loading
+- [ ] Failed requests
+- [ ] Timeout errors
+- [ ] CORS issues
 
-<!-- Qual a gravidade deste bug? -->
+## 🚨 Impact
 
-- [ ] 🔴 Crítico – A aplicação está inutilizável
-- [ ] 🟡 Alto – Funcionalidade principal quebrada
-- [ ] 🟢 Médio – Problema em uma funcionalidade secundária
-- [ ] 🔵 Baixo – Problema visual ou cosmético
+<!-- How severe is this bug? -->
 
-## 💡 Possível solução
+- [ ] 🔴 Critical - Application is unusable
+- [ ] 🟡 High - Major feature is broken
+- [ ] 🟢 Medium - Minor feature issue
+- [ ] 🔵 Low - Cosmetic issue
 
-<!-- Se você tiver ideias de como resolver, compartilhe aqui -->
+## 💡 Possible Solution
 
-## 📋 Problemas relacionados
+<!-- If you have ideas on how to fix this, please share -->
 
-<!-- Vincule quaisquer problemas relacionados -->
+## 📋 Related Issues
 
-- Relacionado a #
-- Duplicado de #
-- Bloqueia #
+<!-- Link any related issues -->
+
+- Related to #
+- Duplicate of #
+- Blocks #

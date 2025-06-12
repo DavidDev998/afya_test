@@ -4,6 +4,11 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "regions": ["iad1"],
+  "secrets": {
+    "VERCEL_TOKEN": "eC2PV5oeLYHg9Q2UjDbslsaX",
+    "VERCEL_ORG_ID": "team_9twPgWi5A6dbTa6xO25jpUxW",
+    "VERCEL_PROJECT_ID": "prj_nxQIoPGmlH0iFRFGEyErW0DdkIq7"
+  },
   "functions": {
     "app/api/**/*.ts": {
       "runtime": "@vercel/node@22.14.0"
