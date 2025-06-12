@@ -137,7 +137,7 @@ export default function CoinsPage() {
           <div>
             {isSearchMode ? (
               <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                Resultados da pesquisa para "{debouncedQuery}"
+                Resultados da pesquisa para &quot;{debouncedQuery}&quot;
               </h2>
             ) : (
               <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
@@ -191,7 +191,8 @@ export default function CoinsPage() {
                   🔍
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-1">
-                  Nenhuma criptomoeda encontrada para "{debouncedQuery}"
+                  Nenhuma criptomoeda encontrada para &quot;{debouncedQuery}
+                  &quot;
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Tente pesquisar com um nome ou símbolo diferente

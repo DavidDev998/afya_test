@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -12,7 +12,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-});
+})
 
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -22,33 +22,34 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   rootMargin: '',
   thresholds: [],
   takeRecords: jest.fn().mockReturnValue([]),
-}));
+}))
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   disconnect: jest.fn(),
   unobserve: jest.fn(),
-}));
+}))
 
 Object.defineProperty(global.Image.prototype, 'src', {
   set() {
-    setTimeout(() => this.onload?.());
+    setTimeout(() => this.onload?.())
   },
-});
+})
 
-const originalError = console.error;
+const originalError = console.error
 beforeAll(() => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   console.error = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is deprecated')
     ) {
-      return;
+      return
     }
-    originalError.call(console, ...args);
-  };
-});
+    originalError.call(console, ...args)
+  }
+})
 
 afterAll(() => {
-  console.error = originalError;
-}); 
+  console.error = originalError
+})

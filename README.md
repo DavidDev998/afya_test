@@ -1,234 +1,293 @@
-# Afya Test App
+# Dashboard de Criptomoedas - Afya Test
 
-![CI](https://github.com/username/afya_test/workflows/CI/badge.svg)
-![CD](https://github.com/username/afya_test/workflows/CD/badge.svg)
-![Coverage](https://codecov.io/gh/username/afya_test/branch/main/graph/badge.svg)
+![CI](https://github.com/DavidDev998/afya_test/workflows/CI/badge.svg)
+![CD](https://github.com/DavidDev998/afya_test/workflows/CD/badge.svg)
+![Coverage](https://codecov.io/gh/DavidDev998/afya_test/branch/main/graph/badge.svg)
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/github/license/username/afya_test)
+![License](https://img.shields.io/github/license/DavidDev998/afya_test)
 
-A modern Next.js application built with TypeScript, React Query, comprehensive testing, Docker support, and automated CI/CD pipeline.
+Um dashboard de criptomoedas construído com Next.js, TypeScript, React Query, tema claro/escuro, testes unitários, containerização Docker e pipeline CI/CD automatizado.
 
-## Features
+## 🚀 Funcionalidades
 
-- ⚡ **Next.js 14** with App Router
-- 🔷 **TypeScript** for type safety
-- 🔄 **React Query (TanStack Query)** for server state management
-- 🧪 **Jest & React Testing Library** for unit testing
-- 🐳 **Docker** containerization
-- 🚀 **Vercel** deployment ready
-- 💨 **Tailwind CSS** for styling
-- 📝 **ESLint & Prettier** for code quality
-- 🎯 **Path aliases** for clean imports
-- 🔄 **GitHub Actions CI/CD** pipeline
-- 🌙 **Dark/Light theme** support
-- 📊 **Automated performance monitoring** with Lighthouse
-- 🔒 **Security scanning** and dependency updates
+- ⚡ **Next.js 14** com App Router
+- 🔷 **TypeScript** para segurança de tipos
+- 🔄 **React Query (TanStack Query)** para gerenciamento de estado do servidor
+- 🌙 **Tema Escuro/Claro** com persistência e detecção automática do sistema
+- 💰 **API de Criptomoedas** integração com dados em tempo real
+- 📊 **Gráficos de Preços** interativos e responsivos
+- 🧪 **Jest & React Testing Library** para testes unitários
+- 🐳 **Docker** containerização
+- 🚀 **Vercel** pronto para deploy
+- 💨 **Tailwind CSS** para estilização
+- 📝 **ESLint & Prettier** para qualidade de código
+- 🎯 **Path aliases** para importações limpas
+- 🔄 **GitHub Actions CI/CD** pipeline completo
+- 📊 **Monitoramento automático de performance** com Lighthouse
+- 🔒 **Escaneamento de segurança** e atualizações de dependências
+- ♿ **Acessibilidade** com suporte completo a screen readers
 
-## Getting Started
+## 📋 Pré-requisitos
 
-### Prerequisites
+- Node.js 18.0.0 ou superior
+- npm 8.0.0 ou superior
 
-- Node.js 18.0.0 or later
-- npm 8.0.0 or later
+## ⚙️ Instalação
 
-### Installation
-
-1. Clone the repository:
+1. Clone o repositório:
 
 ```bash
-git clone <repository-url>
-cd afya-test
+git clone https://github.com/DavidDev998/afya_test.git
+cd afya_test
 ```
 
-2. Install dependencies:
+2. Instale as dependências:
 
 ```bash
 npm install
 ```
 
-3. Run the development server:
+3. Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-## Available Scripts
+## 📜 Scripts Disponíveis
 
-### Development
+### Desenvolvimento
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
+- `npm run dev` - Iniciar servidor de desenvolvimento
+- `npm run build` - Build para produção
+- `npm run start` - Iniciar servidor de produção
 
-### Code Quality
+### Qualidade de Código
 
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues automatically
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-- `npm run type-check` - Run TypeScript compiler check
+- `npm run lint` - Executar ESLint
+- `npm run lint:fix` - Corrigir problemas do ESLint automaticamente
+- `npm run format` - Formatar código com Prettier
+- `npm run format:check` - Verificar formatação do código
+- `npm run type-check` - Executar verificação do compilador TypeScript
 
-### Testing
+### Testes
 
-- `npm run test` - Run tests
-- `npm run test:watch` - Run tests in watch mode
-- `npm run test:coverage` - Run tests with coverage
-- `npm run test:ci` - Run tests for CI (no watch)
-- `npm run test:silent` - Run tests silently
+- `npm run test` - Executar testes
+- `npm run test:watch` - Executar testes em modo watch
+- `npm run test:coverage` - Executar testes com cobertura
+- `npm run test:ci` - Executar testes para CI (sem watch)
+- `npm run test:silent` - Executar testes silenciosamente
 
 ### CI/CD
 
-- `npm run pre-commit` - Pre-commit validation
-- `npm run ci:validate` - Complete CI validation
+- `npm run pre-commit` - Validação pré-commit
+- `npm run ci:validate` - Validação completa de CI
 
-## Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 src/
 ├── app/                    # Next.js App Router
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx          # Home page
-│   └── providers.tsx     # React Query provider
-├── components/            # Reusable components
-│   ├── UsersList.tsx     # Users list component
-│   └── __tests__/        # Component tests
-├── hooks/                 # Custom hooks
-├── lib/                  # Utility libraries
-├── types/                # TypeScript type definitions
-└── utils/                # Utility functions
+│   ├── globals.css        # Estilos globais
+│   ├── layout.tsx         # Layout raiz
+│   ├── page.tsx          # Página inicial (dashboard)
+│   ├── providers.tsx     # Provedores (React Query, Theme)
+│   └── coins/            # Página de listagem de moedas
+│       └── page.tsx
+├── components/            # Componentes reutilizáveis
+│   ├── CoinCard.tsx      # Card de criptomoeda
+│   ├── Navigation.tsx    # Navegação principal
+│   ├── ThemeProvider.tsx # Provedor de tema
+│   ├── ThemeToggle.tsx   # Seletor de tema
+│   ├── ErrorMessage.tsx  # Mensagem de erro
+│   ├── LoadingSpinner.tsx # Indicador de carregamento
+│   ├── PriceChart.tsx    # Gráfico de preços
+│   └── __tests__/        # Testes dos componentes
+├── hooks/                 # Hooks customizados
+│   └── useCoins.ts       # Hook para buscar dados de moedas
+├── lib/                  # Bibliotecas utilitárias
+│   └── api.ts           # Configuração da API
+├── types/                # Definições de tipos TypeScript
+│   └── coin.ts          # Tipos relacionados a moedas
+└── test-setup.ts         # Configuração dos testes
 ```
 
-## Testing
+## 🎨 Sistema de Temas
 
-This project uses Jest and React Testing Library for testing:
+O projeto inclui um sistema completo de temas claro/escuro com:
+
+- **3 Modos**: Claro, Escuro, Sistema (detecta preferência do OS)
+- **Persistência**: Preferência salva no localStorage
+- **Transições Suaves**: Animações CSS para mudanças de tema
+- **Detecção Automática**: Segue a preferência do sistema automaticamente
+- **Acessibilidade**: Suporte completo para leitores de tela
+
+## 🧪 Testes
+
+Este projeto usa Jest e React Testing Library para testes:
 
 ```bash
-# Run all tests
+# Executar todos os testes
 npm run test
 
-# Run tests in watch mode
+# Executar testes em modo watch
 npm run test:watch
 
-# Run tests with coverage
+# Executar testes com cobertura
 npm run test:coverage
 ```
 
-## Docker
+### Cobertura Atual de Testes
 
-### Development
+- **CoinCard**: 11 testes abrangentes
+- **Navigation**: 9 testes incluindo integração com tema
+- Cobertura de componentes críticos e hooks customizados
+
+## 🐳 Docker
+
+### Desenvolvimento
 
 ```bash
-# Build development image
+# Build da imagem de desenvolvimento
 docker build -t afya-test-dev .
 
-# Run container
+# Executar container
 docker run -p 3000:3000 afya-test-dev
 ```
 
-### Production
+### Produção
 
 ```bash
-# Build production image
+# Build da imagem de produção
 docker build -t afya-test-prod .
 
-# Run production container
+# Executar container de produção
 docker run -p 3000:3000 afya-test-prod
 ```
 
-## CI/CD Pipeline
+## 🔄 Pipeline CI/CD
 
-This project includes a comprehensive CI/CD pipeline using GitHub Actions:
+Este projeto inclui um pipeline CI/CD abrangente usando GitHub Actions:
 
-### 🔄 Continuous Integration (CI)
+### ✅ Integração Contínua (CI)
 
-- **Code Quality**: ESLint, Prettier, TypeScript checks
-- **Testing**: Unit tests with coverage reporting
-- **Security**: Dependency vulnerability scanning
-- **Build**: Production build validation
-- **Matrix Testing**: Node.js 18.x and 20.x
+- **Qualidade de Código**: ESLint, Prettier, verificações TypeScript
+- **Testes**: Testes unitários com relatório de cobertura
+- **Segurança**: Escaneamento de vulnerabilidades de dependências
+- **Build**: Validação de build de produção
+- **Teste Matrix**: Node.js 18.x e 20.x
 
-### 🚀 Continuous Deployment (CD)
+### 🚀 Deploy Contínuo (CD)
 
-- **Automatic Deployment**: Push to `main` triggers production deploy
-- **Preview Deployments**: PRs get preview URLs
-- **Performance Monitoring**: Lighthouse audits
-- **Rollback Support**: Easy rollback via Vercel dashboard
+- **Deploy Automático**: Push para `main` dispara deploy de produção
+- **Deploys de Preview**: PRs recebem URLs de preview
+- **Monitoramento de Performance**: Auditoria Lighthouse
+- **Suporte a Rollback**: Rollback fácil via dashboard Vercel
 
-### 📊 Automated Workflows
+### 📊 Workflows Automatizados
 
-- **Dependency Updates**: Weekly automatic dependency updates
-- **Status Badges**: Auto-updating README badges
-- **Visual Regression**: Percy visual testing (optional)
+- **Atualizações de Dependências**: Atualizações automáticas semanais
+- **Badges de Status**: Badges do README auto-atualizáveis
+- **Testes de Regressão Visual**: Testes visuais Percy (opcional)
 
-### Setup Instructions
+### Instruções de Configuração
 
-1. Configure secrets in GitHub repository settings:
+1. Configure secrets nas configurações do repositório GitHub:
 
    ```
-   VERCEL_TOKEN=your_vercel_token
-   VERCEL_ORG_ID=your_vercel_org_id
-   VERCEL_PROJECT_ID=your_vercel_project_id
+   VERCEL_TOKEN=seu_token_vercel
+   VERCEL_ORG_ID=seu_org_id_vercel
+   VERCEL_PROJECT_ID=seu_project_id_vercel
    ```
 
-2. Optional integrations:
+2. Integrações opcionais:
    ```
-   CODECOV_TOKEN=your_codecov_token
-   PERCY_TOKEN=your_percy_token
+   CODECOV_TOKEN=seu_token_codecov
+   PERCY_TOKEN=seu_token_percy
    ```
 
-For detailed CI/CD setup instructions, see [CI/CD Setup Guide](./docs/CI_CD_SETUP.md).
+Para instruções detalhadas de configuração CI/CD, consulte [Guia de Configuração CI/CD](./docs/CI_CD_SETUP.md).
 
-## Deployment
+## 🌐 Deploy
 
-### Vercel (Recommended)
+### Vercel (Recomendado)
 
-The project is configured for automatic deployment to Vercel:
+O projeto está configurado para deploy automático no Vercel:
 
-1. **Automatic**: Push to `main` deploys to production
-2. **Preview**: PRs get preview deployments
-3. **Manual**: Connect repository to Vercel dashboard
+1. **Automático**: Push para `main` faz deploy para produção
+2. **Preview**: PRs recebem deploys de preview
+3. **Manual**: Conecte o repositório ao dashboard Vercel
 
-### Manual Deployment
+### Deploy Manual
 
 ```bash
-# Build the application
+# Build da aplicação
 npm run build
 
-# Start the production server
+# Iniciar servidor de produção
 npm run start
 ```
 
-## Environment Variables
+## 🔧 Variáveis de Ambiente
 
-Create a `.env.local` file for local development:
+Crie um arquivo `.env.local` para desenvolvimento local:
 
 ```env
-# Add your environment variables here
-NEXT_PUBLIC_API_URL=https://api.example.com
+# Adicione suas variáveis de ambiente aqui
+NEXT_PUBLIC_API_URL=https://api.coingecko.com/api/v3
 ```
 
-## Contributing
+## 🤝 Contribuindo
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
+1. Faça fork do repositório
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
+3. Faça suas alterações
+4. Execute testes e linting (`npm run ci:validate`)
+5. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+6. Push para a branch (`git push origin feature/nova-funcionalidade`)
+7. Abra um Pull Request
 
-## Technologies Used
+### Templates Disponíveis
 
-- **Next.js** - React framework
-- **TypeScript** - Type safety
-- **React Query** - Server state management
-- **Tailwind CSS** - Utility-first CSS
-- **Jest** - Testing framework
-- **React Testing Library** - Component testing
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
+- **Pull Request**: Template completo com checklist
+- **Bug Report**: Template para reportar bugs
+- **Feature Request**: Template para solicitar funcionalidades
 
-## License
+## 🛠️ Tecnologias Utilizadas
 
-This project is licensed under the MIT License.
+- **Next.js 14** - Framework React com App Router
+- **TypeScript** - Segurança de tipos
+- **React Query (TanStack Query)** - Gerenciamento de estado do servidor
+- **Tailwind CSS** - Framework CSS utility-first
+- **Jest** - Framework de testes
+- **React Testing Library** - Testes de componentes
+- **ESLint** - Linting de código
+- **Prettier** - Formatação de código
+- **Husky** - Git hooks
+- **Docker** - Containerização
+- **GitHub Actions** - CI/CD
+- **Vercel** - Plataforma de deploy
+
+## 📊 API de Criptomoedas
+
+O projeto integra com a API CoinGecko para fornecer:
+
+- **Dados em Tempo Real**: Preços atualizados de criptomoedas
+- **Informações Detalhadas**: Market cap, volume, variação 24h
+- **Gráficos Históricos**: Dados de preços históricos
+- **Rate Limiting**: Gerenciamento inteligente de rate limits
+
+## ♿ Acessibilidade
+
+O projeto segue as diretrizes WCAG 2.1 com:
+
+- **Navegação por Teclado**: Suporte completo
+- **Screen Reader**: Compatibilidade total
+- **Contrast Ratio**: Atende padrões AA
+- **Semântica HTML**: Estrutura semântica adequada
+- **ARIA Labels**: Labels descritivos para elementos interativos
+
+## 📄 Licença
+
+## Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.

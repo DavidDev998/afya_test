@@ -4,7 +4,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { useState } from 'react'
 
 export const ThemeToggle: React.FC = () => {
-  const { theme, setTheme, isDark } = useTheme()
+  const { theme, setTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
 
   const themes = [
