@@ -7,7 +7,7 @@ interface CoinCardProps {
 }
 
 const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
     minimumFractionDigits: 2,
@@ -16,11 +16,11 @@ const formatPrice = (price: number): string => {
 }
 
 const formatNumber = (num: number): string => {
-  if (num >= 1e12) return `$${(num / 1e12).toFixed(2)}T`
-  if (num >= 1e9) return `$${(num / 1e9).toFixed(2)}B`
-  if (num >= 1e6) return `$${(num / 1e6).toFixed(2)}M`
-  if (num >= 1e3) return `$${(num / 1e3).toFixed(2)}K`
-  return `$${num.toFixed(2)}`
+  if (num >= 1e12) return `R$${(num / 1e12).toFixed(2)}T`
+  if (num >= 1e9) return `R$${(num / 1e9).toFixed(2)}B`
+  if (num >= 1e6) return `R$${(num / 1e6).toFixed(2)}M`
+  if (num >= 1e3) return `R$${(num / 1e3).toFixed(2)}K`
+  return `R$${num.toFixed(2)}`
 }
 
 const formatPercentage = (percentage: number): string => {
